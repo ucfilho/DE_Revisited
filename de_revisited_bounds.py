@@ -9,11 +9,16 @@ Original file is located at
 
 import numpy as np
 
-def de(MAX,MIN, mut, crossp, popsize, its,fobj,X):
+def de(bounds, mut, crossp, popsize, its,fobj,X):
+    
+  Num=len(bounds)
+  MAX=np.zeros(Num)
+  MIN=np.zeros(Num)
+  for i in range(Num):
+        MAX[i]=bounds[i][1]
+        MIN[i]=bounds[i][1]
   
-  
-  Num=len(MAX)
-  bounds=[(0,0)] * Num
+
   dimensions = len(bounds)  
   
   for i in range(Num):
