@@ -16,7 +16,7 @@ import numpy as np
 
 def de(MAX,MIN, mut, crossp, popsize, its,fobj,X,SOMA,TOTAL):
     
-  Num=len(MAX)
+  Num=len(X[0,:]) # num eh usado duas vezes para significados diferentes
   
   XOLD=X
   X=np.zeros((popsize,Num)) 
@@ -26,7 +26,7 @@ def de(MAX,MIN, mut, crossp, popsize, its,fobj,X,SOMA,TOTAL):
         X[i,j]=np.copy(XOLD[i,j])
   
   
-  
+  Num=len(MAX) # alterando Num para segundo significado (definicao de bounds)
   bounds=[(0,0)] * Num
   dimensions = len(bounds)  
   
@@ -37,8 +37,7 @@ def de(MAX,MIN, mut, crossp, popsize, its,fobj,X,SOMA,TOTAL):
   best_idx = np.argmin(fitness)
   best = X[best_idx]
   
-
-  
+  Num=len(X[0,:]) # Alterando Num dimensao da solucao
   for i in range(its):
     if(SOMA>TOTAL):
       break
