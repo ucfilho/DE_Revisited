@@ -59,8 +59,8 @@ def de(MAX,MIN, mut, crossp, popsize, its,fobj,X,SOMA,TOTAL):
       cross_points = np.random.rand(dimensions) < crossp
       if not np.any(cross_points):
         cross_points[np.random.randint(0, dimensions)] = True
-      print("================")  
-      print(cross_points, mutant, X[j,:])
+      #print("================")  
+      #print(cross_points, mutant, X[j,:])
       trial = np.where(cross_points, mutant, X[j,:])
 
 
