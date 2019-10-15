@@ -44,7 +44,14 @@ def de(bounds, mut, crossp, popsize, its,fobj,X):
       if not np.any(cross_points):
         cross_points[np.random.randint(0, dimensions)] = True
 
+      #trial = np.where(cross_points, mutant, X[j,:])
+      #==================================
+      #==================================
+      print(cross_points, mutant, X[j,:])
       trial = np.where(cross_points, mutant, X[j,:])
+      print(trial)
+      #==================================
+      #==================================
 
 
       f = fobj(trial)
