@@ -14,14 +14,13 @@ def de(bounds, mut, crossp, popsize, its,fobj,X):
   Num=len(bounds)
   MAX=np.zeros(Num)
   MIN=np.zeros(Num)
+
   for i in range(Num):
         MAX[i]=bounds[i][1]
         MIN[i]=bounds[i][1]
-  
-
-  #dimensions = len(bounds)
-  dimensions = len(X[0,:])
-  #dimensions =3
+        
+  dimensions = len(bounds)
+  #dimensions = len(X[0,:])
   
   for i in range(Num):
     bounds[i]=(MIN[i], MAX[i])
