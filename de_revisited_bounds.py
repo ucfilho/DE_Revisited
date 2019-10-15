@@ -20,7 +20,8 @@ def de(bounds, mut, crossp, popsize, its,fobj,X):
   
 
   #dimensions = len(bounds)
-  dimensions = len(X[0,:])  
+  dimensions = 3
+  #dimensions = len(X[0,:])  
   
   for i in range(Num):
     bounds[i]=(MIN[i], MAX[i])
