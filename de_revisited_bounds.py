@@ -34,10 +34,10 @@ def de(bounds, mut, crossp, popsize, its,fobj,X):
       idxs = [idx for idx in range(popsize) if idx != j]
       a, b, c = X[np.random.choice(idxs, 3, replace = False)]
       mutant = a + mut * (b - c)
-      print("=====================")
-      print(MAX)
-      print(mutant)
-      print("=====================")
+      #print("=====================")
+      #print(MAX)
+      #print(mutant)
+      #print("=====================")
       for k in range(dimensions):
         #print(k)
         #if(mutant[k]>MAX[k]):
@@ -57,6 +57,8 @@ def de(bounds, mut, crossp, popsize, its,fobj,X):
       #trial = np.where(cross_points, mutant, X[j,:])
       #==================================
       #==================================
+      print("====AQUI=========")
+      print("====CHEGUEI=============")
       print(cross_points, mutant, X[j,:])
       trial = np.where(cross_points, mutant, X[j,:])
       print(trial)
