@@ -39,7 +39,7 @@ def de(bounds, mut, crossp, popsize, its,fobj,X):
       print(mutant)
       print("=====================")
       for k in range(dimensions):
-        print(k)
+        #print(k)
         #if(mutant[k]>MAX[k]):
         #  mutant[k]=MAX[k]
         #if(mutant[k]<MIN[k]):
@@ -57,9 +57,9 @@ def de(bounds, mut, crossp, popsize, its,fobj,X):
       #trial = np.where(cross_points, mutant, X[j,:])
       #==================================
       #==================================
-      #print(cross_points, mutant, X[j,:])
+      print(cross_points, mutant, X[j,:])
       trial = np.where(cross_points, mutant, X[j,:])
-      #print(trial)
+      print(trial)
       #==================================
       #==================================
 
