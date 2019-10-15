@@ -47,9 +47,9 @@ def de(bounds, mut, crossp, popsize, its,fobj,X):
       #trial = np.where(cross_points, mutant, X[j,:])
       #==================================
       #==================================
-      print(cross_points, mutant, X[j,:])
+      #print(cross_points, mutant, X[j,:])
       trial = np.where(cross_points, mutant, X[j,:])
-      print(trial)
+      #print(trial)
       #==================================
       #==================================
 
