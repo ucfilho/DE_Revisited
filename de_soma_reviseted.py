@@ -64,6 +64,7 @@ def de(MAX,MIN, mut, crossp, popsize, its,fobj,X,SOMA,TOTAL):
       #==================================
       print(cross_points, mutant, X[j,:])
       trial = np.where(cross_points, mutant, X[j,:])
+      print(trial)
       #==================================
       #==================================
 
