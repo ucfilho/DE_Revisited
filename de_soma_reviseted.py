@@ -28,7 +28,8 @@ def de(MAX,MIN, mut, crossp, popsize, its,fobj,X,SOMA,TOTAL):
   
   Num=len(MAX) # alterando Num para segundo significado (definicao de bounds)
   bounds=[(0,0)] * Num
-  dimensions = len(bounds)  
+  # dimensions = len(bounds)  # dimensions refere a populacao
+  dimensions =len(X[0,:]) # num eh usado duas vezes para significados diferentes
   
   for i in range(Num):
     bounds[i]=(MIN[i], MAX[i])
@@ -62,9 +63,9 @@ def de(MAX,MIN, mut, crossp, popsize, its,fobj,X,SOMA,TOTAL):
         
       #==================================
       #==================================
-      print(cross_points, mutant, X[j,:])
+      #print(cross_points, mutant, X[j,:])
       trial = np.where(cross_points, mutant, X[j,:])
-      print(trial)
+      #print(trial)
       #==================================
       #==================================
 
